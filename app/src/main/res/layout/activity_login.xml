@@ -4,39 +4,34 @@
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/lovelogin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/city"
     tools:context="com.cudocomm.assetwatcher.LoginActivity">
+
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/logo"
+        android:src="@drawable/indosiar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         />
     <TextView
         android:id="@+id/llg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Let Love Grow "
+        android:layout_height="wrap_content"
+        android:text="Asset Watcher Indosiar"
         android:textColor="#fff"
         android:textSize="30dp"
         android:gravity="center"
+        android:layout_marginTop="180dp"
         android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="520dp"
+        android:layout_marginTop="420dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-
-
-        >
+        android:layout_marginRight="25dp">
         <TextView
             android:id="@+id/login"
             android:layout_width="wrap_content"
@@ -50,19 +45,7 @@
             android:layout_marginRight="10dp"
             android:textStyle="bold"
             />
-        <TextView
-            android:id="@+id/signup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SIGNUP"
-            android:textColor="#fff"
-            android:background="@drawable/brodetr"
-            android:padding="15dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_marginLeft="10dp"
-            android:textStyle="bold"
-            />
+
 
 
     </LinearLayout>
@@ -93,6 +76,7 @@
                     android:layout_height="20dp"
                     android:src="@drawable/user"
                     android:layout_gravity="center"/>
+
 
                 <EditText
                     android:id="@+id/user"
@@ -152,6 +136,4 @@
                 android:background="#5fff"></LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-
 </RelativeLayout>
