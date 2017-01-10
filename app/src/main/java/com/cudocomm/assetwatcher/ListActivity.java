@@ -8,9 +8,17 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.cudocomm.assetwatcher.adapter.TaskListAdapter;
+import com.cudocomm.assetwatcher.model.Model_TaskList;
+
+import java.util.ArrayList;
+
 public class ListActivity extends AppCompatActivity {
 
     private ListView listView;
+    TaskListAdapter taskListAdapter;
+    private ArrayList<Model_TaskList> taskListArray = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,13 +26,10 @@ public class ListActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.list_view);
 
-        String[] values = new String[] {"List 1","List 2","List 3","List 4", "List 5", "List 6", "List 7", "List 8", "List 9", "List 10"};
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values);
+        taskListAdapter = new TaskListAdapter(this, taskListArray);
 
         //Assign adapter to ListView
-        listView.setAdapter(adapter);
+        listView.setAdapter(taskListAdapter);
 
         //ListView Item Click Listener
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -43,5 +48,26 @@ public class ListActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    void populateData(){
+        for(int i=0; i <= 10; i++){
+            Model_TaskList model_taskList = new Model_TaskList();
+            model_taskList.setAtm_type("hardware");
+            model_taskList.setSiteid("01");
+            model_taskList.setNe_name("Site01");
+            model_taskList.setLat("-6.31823272");
+            model_taskList.setLon("1.382382382");
+            model_taskList.setNoatf("019382");
+            model_taskList.setNe_id("02");
+            model_taskList.setPending("Pending");
+            model_taskList.setProjectid("03");
+            model_taskList.setStatus("Active");
+            model_taskList.setRemark("Remark");
+            model_taskList.setTargetdate("10/01/2017");
+            model_taskList.setTaskid("09");
+            model_taskList.setSitename("Site Name 01");
+            model_taskList.setProjectid("P01");
+        }
     }
 }
